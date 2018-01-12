@@ -1,0 +1,78 @@
+.Grid
+{
+    font-family: ËÎÌו;
+    font-size: 12px;
+    border: 1px solid #7C7C94;
+    background-color: #FFFFFF;
+}
+.HeadRow
+{
+    font-size: 13px;
+    height: 22px;
+    background-color: #aaaaaa;
+    color: White;
+}
+.HeadRow A
+{
+    color: White;
+}
+.Row
+{
+    background-color: #ffffff;
+    height: 20px;
+}
+.Row A
+{
+    color: blue;
+}
+.AltRow
+{
+    background-color: #e6e6e6;
+    height: 20px;
+}
+.AltRow A
+{
+    color: blue;
+}
+.HoverRow
+{
+    background-color: #ccccff;
+    height: 20px;
+}
+.HoverRow A
+{
+    color: blue;
+}
+.SelectedRow
+{
+    background-color: #FF9933;
+    height: 20px;
+}
+.PagerRow
+{
+    font-size: 13px;
+    border-style: none solid solid solid;
+    border-width: 1px;
+    border-color: #7C7C94;
+    background-color: #bebebe;
+    height: 24px;
+}
+.PagerRow A
+{
+    color: #0000FF;
+}
+.TableCaption
+{
+    font-weight: bold;
+    font-size: 11pt;
+    color: blue;
+    font-family: ËÎÌו;
+}
+.NoCount
+{
+    font-size: 14px;
+    color: #0000FF;
+    background-color: #eee8ff;
+    text-align: center;
+    height: 40px;
+}

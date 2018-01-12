@@ -1,0 +1,15 @@
+<License>
+  <Data>
+    <Tag>Team Lz0</Tag>
+    <EditionType>Enterprise</EditionType>
+    <SerialNumber>DDB5B369-4409-4CA4-B2ED-66E6D4F9A4CB</SerialNumber>
+    <SubscriptionExpiry>30000101</SubscriptionExpiry>
+    <LicenseExpiry>30000101</LicenseExpiry>
+    <OemPublicKeyToken>
+    </OemPublicKeyToken>
+    <Products>
+      <Product>Aspose.Word</Product>
+    </Products>
+  </Data>
+  <Signature>qvfgHW1XKdK5wcs/cwa1FGAgMaONeD3DJd4oA1CaBEKRGPxxYG/3gq3LsTcHhIjokSDiGjHjJI+zriFGQ2VNWLRPHUMlUN1nc3zFa6NO4hHX+kw0+oblG86Mv5RgLVb0qREvL9AxQOskkCp25UzAYEtzYIqX5oOuzs7yzvJGR9k=</Signature>
+</License>

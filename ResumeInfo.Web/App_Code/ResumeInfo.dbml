@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ResumeInfo" Class="ResumeInfoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(local);Initial Catalog=ResumeInfo;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ResumeInfoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Zhiyzg" Member="Zhiyzg">
+    <Type Name="Zhiyzg">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="zg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="hdsj" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="zcd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="enuZg_Zhiyzg" Member="enuZg" ThisKey="zg" OtherKey="PKID" Type="enuZg" IsForeignKey="true" />
+      <Association Name="BaseInfo_Zhiyzg" Member="BaseInfo" ThisKey="UserID" OtherKey="UserID" Type="BaseInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.enuGzsxlb" Member="enuGzsxlb">
+    <Type Name="enuGzsxlb">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DisOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsShow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="enuGzsxlb_Gongzsx" Member="Gongzsx" ThisKey="PKID" OtherKey="gzsxlb" Type="Gongzsx" />
+    </Type>
+  </Table>
+  <Table Name="dbo.enuHyzk" Member="enuHyzk">
+    <Type Name="enuHyzk">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DisOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsShow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="enuHyzk_BaseInfo" Member="BaseInfo" ThisKey="PKID" OtherKey="hyzk" Type="BaseInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.enuJyjd" Member="enuJyjd">
+    <Type Name="enuJyjd">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DisOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsShow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="enuJyjd_Jiaoybj" Member="Jiaoybj" ThisKey="PKID" OtherKey="jyjd" Type="Jiaoybj" />
+    </Type>
+  </Table>
+  <Table Name="dbo.enuLaiy" Member="enuLaiy">
+    <Type Name="enuLaiy">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DisOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsShow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="enuLaiy_BaseInfo" Member="BaseInfo" ThisKey="PKID" OtherKey="ypzly" Type="BaseInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.enuQwyx" Member="enuQwyx">
+    <Type Name="enuQwyx">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DisOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsShow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="enuQwyx_BaseInfo" Member="BaseInfo" ThisKey="PKID" OtherKey="qwxc" Type="BaseInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.enuSex" Member="enuSex">
+    <Type Name="enuSex">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DisOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsShow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="enuSex_BaseInfo" Member="BaseInfo" ThisKey="PKID" OtherKey="Sex" Type="BaseInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.enuWjlx" Member="enuWjlx">
+    <Type Name="enuWjlx">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DisOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsShow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="enuWjlx_FileInfo" Member="FileInfo" ThisKey="PKID" OtherKey="wjlx" Type="FileInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.enuZc" Member="enuZc">
+    <Type Name="enuZc">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DisOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsShow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="enuZc_BaseInfo" Member="BaseInfo" ThisKey="PKID" OtherKey="zc" Type="BaseInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.enuZg" Member="enuZg">
+    <Type Name="enuZg">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DisOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsShow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="enuZg_Zhiyzg" Member="Zhiyzg" ThisKey="PKID" OtherKey="zg" Type="Zhiyzg" />
+    </Type>
+  </Table>
+  <Table Name="dbo.enuZy" Member="enuZy">
+    <Type Name="enuZy">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DisOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsShow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="enuZy_BaseInfo" Member="BaseInfo" ThisKey="PKID" OtherKey="cszy" Type="BaseInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.enuZzmm" Member="enuZzmm">
+    <Type Name="enuZzmm">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DisOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsShow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="enuZzmm_Jiatshgx" Member="Jiatshgx" ThisKey="PKID" OtherKey="zzmm" Type="Jiatshgx" />
+      <Association Name="enuZzmm_BaseInfo" Member="BaseInfo" ThisKey="PKID" OtherKey="zzmm" Type="BaseInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FileInfo" Member="FileInfo">
+    <Type Name="FileInfo">
+      <Column Name="FileID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FLength" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="wjlx" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fjsm" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UpTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="enuWjlx_FileInfo" Member="enuWjlx" ThisKey="wjlx" OtherKey="PKID" Type="enuWjlx" IsForeignKey="true" />
+      <Association Name="BaseInfo_FileInfo" Member="BaseInfo" ThisKey="UserID" OtherKey="UserID" Type="BaseInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Jiatshgx" Member="Jiatshgx">
+    <Type Name="Jiatshgx">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cw" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="xm" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nl" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="zzmm" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gzdw" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="bmzw" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="enuZzmm_Jiatshgx" Member="enuZzmm" ThisKey="zzmm" OtherKey="PKID" Type="enuZzmm" IsForeignKey="true" />
+      <Association Name="BaseInfo_Jiatshgx" Member="BaseInfo" ThisKey="UserID" OtherKey="UserID" Type="BaseInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MenuItem" Member="MenuItem">
+    <Type Name="MenuItem">
+      <Column Name="MenuItemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TopMenuID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Icon" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="URLPath" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Flag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TopMenu_MenuItem" Member="TopMenu" ThisKey="TopMenuID" OtherKey="TopMenuID" Type="TopMenu" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TopMenu" Member="TopMenu">
+    <Type Name="TopMenu">
+      <Column Name="TopMenuID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TopMenu_MenuItem" Member="MenuItem" ThisKey="TopMenuID" OtherKey="TopMenuID" Type="MenuItem" />
+    </Type>
+  </Table>
+  <Table Name="dbo.enuZt" Member="enuZt">
+    <Type Name="enuZt">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DisOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsShow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="enuZt_BaseInfo" Member="BaseInfo" ThisKey="PKID" OtherKey="zt" Type="BaseInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.zhiwei" Member="zhiwei">
+    <Type Name="zhiwei">
+      <Column Name="pkid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sl" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ms" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="zy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="bm" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="xz" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ltime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Menu" Member="Menu">
+    <Type Name="Menu">
+      <Column Name="mid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mutype" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mtop" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="murl" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="mdisplayorder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="missub" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Attention" Member="Attention">
+    <Type Name="Attention">
+      <Column Name="aid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="acontent" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="[asubscriber  ]" Member="asubscriber__" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="aowner" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Application" Member="Application">
+    <Type Name="Application">
+      <Column Name="aid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="auid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="acid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Career_Application" Member="Career" ThisKey="acid" OtherKey="cid" Type="Career" IsForeignKey="true" />
+      <Association Name="BaseInfo_Application" Member="BaseInfo" ThisKey="auid" OtherKey="UserID" Type="BaseInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.enuCtype" Member="enuCtype">
+    <Type Name="enuCtype">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DisOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="enuCtype_Career" Member="Career" ThisKey="PKID" OtherKey="ctype" Type="Career" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Career" Member="Career">
+    <Type Name="Career">
+      <Column Name="ctype" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cdept" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cpot" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ceducation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cnumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ccontent" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="cquality" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cmail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ctransfer" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="cid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cdisplay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="cvalid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ctime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Career_Application" Member="Application" ThisKey="cid" OtherKey="acid" Type="Application" />
+      <Association Name="enuCtype_Career" Member="enuCtype" ThisKey="ctype" OtherKey="PKID" Type="enuCtype" IsForeignKey="true" />
+      <Association Name="Department_Career" Member="Department" ThisKey="cdept" OtherKey="did" Type="Department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Department" Member="Department">
+    <Type Name="Department">
+      <Column Name="dname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="did" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Department_Career" Member="Career" ThisKey="did" OtherKey="cdept" Type="Career" />
+      <Association Name="Department_User" Member="User" ThisKey="did" OtherKey="udept" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="User">
+    <Type Name="User">
+      <Column Name="uname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="upwd" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="utype" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="udept" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="umail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Department_User" Member="Department" ThisKey="udept" OtherKey="did" Type="Department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.enuGzdd" Member="enuGzdd">
+    <Type Name="enuGzdd">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Label" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DisOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsShow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="enuGzdd_BaseInfo" Member="BaseInfo" ThisKey="PKID" OtherKey="gzdd1" Type="BaseInfo" />
+      <Association Name="enuGzdd_BaseInfo1" Member="BaseInfo1" ThisKey="PKID" OtherKey="gzdd2" Type="BaseInfo" />
+      <Association Name="enuGzdd_BaseInfo2" Member="BaseInfo2" ThisKey="PKID" OtherKey="gzdd3" Type="BaseInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Jiaoybj" Member="Jiaoybj">
+    <Type Name="Jiaoybj">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kssj" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="jssj" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="byyx" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sxzy" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ds" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="jyjd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="enuJyjd_Jiaoybj" Member="enuJyjd" ThisKey="jyjd" OtherKey="PKID" Type="enuJyjd" IsForeignKey="true" />
+      <Association Name="BaseInfo_Jiaoybj" Member="BaseInfo" ThisKey="UserID" OtherKey="UserID" Type="BaseInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Gongzsx" Member="Gongzsx">
+    <Type Name="Gongzsx">
+      <Column Name="PKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kssj" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="jssj" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dw" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cszy" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="bmjzw" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="zmr" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="zmrlxdh" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="sxnr" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="gzsxlb" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="enuGzsxlb_Gongzsx" Member="enuGzsxlb" ThisKey="gzsxlb" OtherKey="PKID" Type="enuGzsxlb" IsForeignKey="true" />
+      <Association Name="BaseInfo_Gongzsx" Member="BaseInfo" ThisKey="UserID" OtherKey="UserID" Type="BaseInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BaseInfo" Member="BaseInfo">
+    <Type Name="BaseInfo">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ypzly" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="csrq" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="zzmm" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="jg" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="csd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hkszd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mz" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hyzk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="jkzk" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="grtc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sj" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="yxdh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="lxdz" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="qwxc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dywy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dewy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="jsj" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="zc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="jypx" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="xsky" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="stqk" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="jcqk" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifyTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="zfflag" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="sg" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tz" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="pwd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="zt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gzdd1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gzdd2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gzdd3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cszy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BaseInfo_Zhiyzg" Member="Zhiyzg" ThisKey="UserID" OtherKey="UserID" Type="Zhiyzg" />
+      <Association Name="BaseInfo_FileInfo" Member="FileInfo" ThisKey="UserID" OtherKey="UserID" Type="FileInfo" />
+      <Association Name="BaseInfo_Jiatshgx" Member="Jiatshgx" ThisKey="UserID" OtherKey="UserID" Type="Jiatshgx" />
+      <Association Name="BaseInfo_Application" Member="Application" ThisKey="UserID" OtherKey="auid" Type="Application" />
+      <Association Name="BaseInfo_Jiaoybj" Member="Jiaoybj" ThisKey="UserID" OtherKey="UserID" Type="Jiaoybj" />
+      <Association Name="BaseInfo_Gongzsx" Member="Gongzsx" ThisKey="UserID" OtherKey="UserID" Type="Gongzsx" />
+      <Association Name="enuGzdd_BaseInfo" Member="enuGzdd" ThisKey="gzdd1" OtherKey="PKID" Type="enuGzdd" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="enuGzdd_BaseInfo1" Member="enuGzdd1" ThisKey="gzdd2" OtherKey="PKID" Type="enuGzdd" IsForeignKey="true" />
+      <Association Name="enuGzdd_BaseInfo2" Member="enuGzdd2" ThisKey="gzdd3" OtherKey="PKID" Type="enuGzdd" IsForeignKey="true" />
+      <Association Name="enuHyzk_BaseInfo" Member="enuHyzk" ThisKey="hyzk" OtherKey="PKID" Type="enuHyzk" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="enuLaiy_BaseInfo" Member="enuLaiy" ThisKey="ypzly" OtherKey="PKID" Type="enuLaiy" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="enuQwyx_BaseInfo" Member="enuQwyx" ThisKey="qwxc" OtherKey="PKID" Type="enuQwyx" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="enuSex_BaseInfo" Member="enuSex" ThisKey="Sex" OtherKey="PKID" Type="enuSex" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="enuZc_BaseInfo" Member="enuZc" ThisKey="zc" OtherKey="PKID" Type="enuZc" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="enuZt_BaseInfo" Member="enuZt" ThisKey="zt" OtherKey="PKID" Type="enuZt" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="enuZy_BaseInfo" Member="enuZy" ThisKey="cszy" OtherKey="PKID" Type="enuZy" IsForeignKey="true" DeleteRule="SET NULL" />
+      <Association Name="enuZzmm_BaseInfo" Member="enuZzmm" ThisKey="zzmm" OtherKey="PKID" Type="enuZzmm" IsForeignKey="true" DeleteRule="SET NULL" />
+    </Type>
+  </Table>
+</Database>

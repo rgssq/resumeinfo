@@ -1,0 +1,85 @@
+BODY
+{
+    font-size: 9pt;
+    background-color: #e0e0e0;
+}
+INPUT
+{
+    background-color:expression((type=="text" || type=="file" || type=="password") ? "#EFF2FE" : ";");
+    border:expression((type=="text" || type=="file" || type=="password") ? "1px solid #7F9DB9" : ";");
+}
+textarea
+{
+    border: 1px solid #7F9DB9;
+    background-color: #EFF2FE;
+}
+SELECT
+{
+    background-color: #EFF2FE;
+}
+FIELDSET
+{
+    border: 2px solid royalblue;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-bottom: 5px;
+    padding-top: 2px;
+}
+LEGEND
+{
+    color: #3300ff;
+    font-family: ËÎÌו;
+}
+.ModalBackground
+{
+    background-color: Gray;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+}
+.ModalDiv
+{
+    background-color: #ffffdd;
+    border-width: 3px;
+    border-style: solid;
+    border-color: Gray;
+    padding: 10px;
+    width: 220px;
+    height: 40px;
+}
+.InvaliTip
+{
+    background-color: #FFFACD;
+}
+.ShadowPanel
+{
+    background-color: #0927FD;
+    color: #FFFFFF;
+}
+.title
+{
+    padding: 5px;
+    font-size: 18px;
+    color: #0000FF;
+    font-weight: bold;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #FF6600;
+}
+.HideProgressDiv
+{
+    width: 220px;
+    display: none;
+}
+.ShowProgressDiv
+{
+    font-size: 11pt;
+    color: #ffffff;
+    font-family: ËÎÌו;
+    background-color: #9999ff;
+    font-weight: bold;
+    width: 220px;
+}
+.tip
+{
+    color:Red;
+}
